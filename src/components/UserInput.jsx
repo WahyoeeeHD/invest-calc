@@ -9,9 +9,7 @@ export function UserInput({ onChangeInput, userInputData }) {
             name="initial"
             required
             value={userInputData.initialInvestment}
-            onChange={(e) =>
-              onChangeInput("initialInvestment", e.target.value)
-            }
+            onChange={(e) => onChangeInput("initialInvestment", e.target.value)}
           />
         </p>
         <p>
@@ -21,9 +19,7 @@ export function UserInput({ onChangeInput, userInputData }) {
             name="annual"
             required
             value={userInputData.annualInvestment}
-            onChange={(e) =>
-              onChangeInput("annualInvestment", e.target.value)
-            }
+            onChange={(e) => onChangeInput("annualInvestment", e.target.value)}
           />
         </p>
       </div>
@@ -34,9 +30,7 @@ export function UserInput({ onChangeInput, userInputData }) {
             type="number"
             name="return"
             value={userInputData.expectedReturn}
-            onChange={(e) =>
-              onChangeInput("expectedReturn", e.target.value)
-            }
+            onChange={(e) => onChangeInput("expectedReturn", e.target.value)}
           />
         </p>
         <p>

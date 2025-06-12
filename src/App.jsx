@@ -11,6 +11,8 @@ export default function App() {
     duration: 10,
   });
 
+  const isValid = userInput.duration >= 1;
+
   function handleInputChange(inputIdentifier, newValue) {
     // karena data yang ada di input harus berdasarkan data yang sudah ada atau sebelumnya , maka kita harus menggunakan function dalam function biar datanya muncul!
     setUserInput((prevData) => {
@@ -24,7 +26,11 @@ export default function App() {
   return (
     <>
       <KotakHijau onChangeInput={handleInputChange} userInputData={userInput} />
-      <Results inputData={userInput} />
+      {isValid ? (
+        <Results inputData={userInput} />
+      ) : (
+        <p className="center">Please input a valid number</p>
+      )}
     </>
   );
 }
