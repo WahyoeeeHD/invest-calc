@@ -16,7 +16,7 @@ export default function App() {
     setUserInput((prevData) => {
       return {
         ...prevData,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue,
       };
     });
   }
@@ -24,7 +24,7 @@ export default function App() {
   return (
     <>
       <KotakHijau onChangeInput={handleInputChange} userInputData={userInput} />
-      <Results />
+      <Results inputData={userInput} />
     </>
   );
 }

@@ -1,4 +1,9 @@
-export function Table() {
+import { calculateInvestmentResults } from "../util/investment";
+
+export function Table({ inputData }) {
+  const resultsData = calculateInvestmentResults(inputData);
+  console.log(resultsData);
+
   return (
     <table id="result" className="center border border-black">
       <thead>
