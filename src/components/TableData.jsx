@@ -8,7 +8,7 @@ export function Table({ inputData }) {
     resultsData[0].annualInvestment;
 
   return (
-    <table id="result" className="center border border-black">
+    <table id="result">
       <thead>
         <tr>
           <th>Year</th>
